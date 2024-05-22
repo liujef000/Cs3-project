@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <link rel="icon" 
+      type="image/png" 
+      href="https://th.bing.com/th/id/OIP.YGAoWewfAs2VbfrlB4CRwwAAAA?rs=1&pid=ImgDetMain">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel ="stylesheet" href = "chair.css">
+</head>
+<body class = "compinterest">
+   <audio control autoplay loop>
+    <source src = "audio/AdVenture Capitalist OST  Main Theme (Earth).mp3" type ="audio/mpeg">
+    your browser does not support the audio element
+   </audio>
+   <div class="topnav">
+    <a class = "active" href = "compinterest.html" title = "real compound calculator">Compound Interest</a>
+    <a href = "currency.html" title = "real currency calculator" >Currency</a>
+    <a href = "inflationCalc.html" title = "real inflation calculator">Inflation Calculator</a>
+    <a href = "mortgage.html" title = "real mortgage calculator" >Mortgage</a>
+    <a href = "simpleInterest.html" title = "real intrest calculator">Simple Interest</a>
+</div>
+<br>
+<br>
+    <h1 id="among">Compound Interest Calculator</h1>
+    <a href ="https://www.youtube.com/watch?v=08jouFjcxQA">
+     <button class="btn">  <img src="images/funny monocle man.png" alt ="" title="money money money"></button>
+        </a>
+    <div>
+      <label>principal: </label>
+      <input id="p" placeholder = "1000">
+   </div>
+
+
+   <div>
+       <label>rate in %: </label>
+       <input id="r" placeholder = "10">
+    </div>
+
+
+   <div>
+       <label>number of payments: </label>
+       <input id="n" placeholder = "360">
+ </div>
+ <input type="button" onclick = "compound()" value="Compound">
+ <p id = "bingus">output</p><br>
+   <a class = "about-link" href = "about.html" title = "about us">About Us</a>
+   <br>
+   <div class = "right"> 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id = "amog" class = "open-button" onclick = "openForm()"><img id = "amog" src ="images/Calcualtor.png"></button>
+    <div class="form-popup" id = "myForm">
+        <div id="calculator">
+            <input id="display" readonly>
+            <div id="keys">
+            <button onclick="TheUmmTheUhhTheErr('+')"class="operator-btn">+</button>
+            <button onclick="TheUmmTheUhhTheErr('7')">7</button>
+            <button onclick="TheUmmTheUhhTheErr('8')">8</button>
+            <button onclick="TheUmmTheUhhTheErr('9')">9</button>
+            <button onclick="TheUmmTheUhhTheErr('-')"class="operator-btn">-</button>
+            <button onclick="TheUmmTheUhhTheErr('4')">4</button>
+            <button onclick="TheUmmTheUhhTheErr('5')">5</button>
+            <button onclick="TheUmmTheUhhTheErr('6')">6</button>
+            <button onclick="TheUmmTheUhhTheErr('*')"class="operator-btn">*</button>
+            <button onclick="TheUmmTheUhhTheErr('1')">1</button>
+            <button onclick="TheUmmTheUhhTheErr('2')">2</button>
+            <button onclick="TheUmmTheUhhTheErr('3')">3</button>
+            <button onclick="TheUmmTheUhhTheErr('/')"class="operator-btn">/</button>
+            <button onclick="TheUmmTheUhhTheErr('0')">0</button>
+            <button onclick="TheUmmTheUhhTheErr('.')">.</button>
+            <button onclick ="calculate()">=</button>
+            <button onclick = "clearDisplay()" class="operator-btn">C</button>
+            <button class="close-btn" onclick="closeForm()">X</button>
+              </div>
+           </div>
+      </div>
+</div>
+    <br>
+    <script>
+               function compound()
+        {
+            let  prin = document.getElementById("p").value;
+            let num = document.getElementById("n").value;
+            let rate = document.getElementById("r").value;
+            rate = rate/100;
+            let tot;
+            tot = prin * Math.pow(1+(rate/num),num);
+            tot = Math.ceil(tot*100) / 100;
+            if (/\./.test(tot) === false) {
+               tot = `${tot}.00`;
+            }
+            if(prin==""||num==""||rate=="")
+            {
+                document.getElementById("bingus").textContent = "Please fill out all fields";
+            }
+            else{
+                document.getElementById("bingus").textContent = "$" + prin + " at a rate of " +document.getElementById("r").value+ "% after being compounded " + num + " times is $" + tot + ".";
+            }
+        }
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+const display=document.getElementById("display");
+        function calculate(){
+            try{
+                display.value = eval(display.value);
+            }
+            catch(error)
+            {
+                display.value = "Error, refresh page";
+            }
+        }
+        function TheUmmTheUhhTheErr(input){
+            display.value += input;
+        }
+        function clearDisplay(){
+            display.value = " ";
+        }
+    </script>
+</body>
+</html>
+

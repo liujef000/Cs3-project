@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+   <link rel="icon" 
+      type="image/png" 
+      href="https://th.bing.com/th/id/OIP.YGAoWewfAs2VbfrlB4CRwwAAAA?rs=1&pid=ImgDetMain">
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel ="stylesheet" href = "chair.css">
+</head>
+<body class = "currency">
+    <audio control autoplay loop>
+        <source src = "audio/AdVenture Capitalist OST  Main Theme (Earth).mp3" type ="audio/mpeg">
+        your browser does not support the audio element
+    </audio>
+    <div class="topnav">
+        <a href = "compinterest.html" title = "real compound calculator">Compound Interest</a>
+        <a class = "active" href = "currency.html" title = "real currency calculator" >Currency</a>
+        <a href = "inflationCalc.html" title = "real inflation calculator">Inflation Calculator</a>
+        <a href = "mortgage.html" title = "real mortgage calculator" >Mortgage</a>
+        <a href = "simpleInterest.html" title = "real intrest calculator">Simple Interest</a>
+    </div>
+    <br>
+    <br>
+    <h1 id="among">Currency Converter<br></h1>
+    <a href="https://urldefense.com/v3/__https://www.youtube.com/watch?v=08jouFjcxQA__;!!PfbeBCCAmug!gxMirSaK02QdIrxalK_haLZXEAe0lmiOHRb74LlftXFadaFDpzctA_oS3uMax9xn9cVwfvoMcz6tYfEtczpB0w$">
+        <button class="btn">  <img src="images/funny monocle man.png" alt ="" title="money money money"></button>
+    </a>
+    <br>
+
+    <!--
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">Convert</span>
+            <div class="caret"></div>
+        </div>
+        <ul class ="menu">
+            <li>USD</li>
+            <li>Yuan</li>
+            <li>Ruble</li>
+            <li>Euro</li>
+            <li>BTC</li>
+            <li>Robux</li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <div class="select">
+            <span class="selected">Converted</span>
+            <div class="caret"></div>
+        </div>
+        <ul class ="menu">
+            <li>USD</li>
+            <li>Yuan</li>
+            <li>Ruble</li>
+            <li>Euro</li>
+            <li>BTC</li>
+            <li>Robux</li>
+        </ul>
+    </div>
+    -->
+    <select id="from"> convert
+        <option value="1"> USD </option>
+        <option value="1.06"> Euro </option>
+        <option value=".14"> Chinese Yuan </option>
+        <option value="1.25"> British Pound Sterling </option>
+        <option value="0.011"> Russian Ruble </option>
+        <option value="0.0065"> Japanese Yen </option>
+        <option value="1.1"> Swiss Franc </option>
+        <option value=".0031"> Turkish Lira </option>
+        <option value="0.13"> Hong Kong Dollar </option>
+        <option value="3.25"> Kuwaiti Dinar </option>
+        <option value="0.73"> Singapore Dollar </option>
+        <option value="0.012"> Indian Rupee </option>
+        <option value="0.053"> South African Rand </option>
+        <option value="1=0.19"> Brazilian Real </option>
+        <option value="0.092"> Norweigan Krone </option>
+        <option value="0.14"> Danish Krone </option>
+     </select>
+     <select id="to"> convert
+        <option value="1"> USD </option>
+        <option value="1.06"> Euro </option>
+        <option value=".14"> Chinese Yuan </option>
+        <option value="1.25"> British Pound Sterling </option>
+        <option value="0.011"> Russian Ruble </option>
+        <option value="0.0065"> Japanese Yen </option>
+        <option value="1.1"> Swiss Franc </option>
+        <option value=".0031"> Turkish Lira </option>
+        <option value="0.13"> Hong Kong Dollar </option>
+        <option value="3.25"> Kuwaiti Dinar </option>
+        <option value="0.73"> Singapore Dollar </option>
+        <option value="0.012"> Indian Rupee </option>
+        <option value="0.053"> South African Rand </option>
+        <option value="10.19"> Brazilian Real </option>
+        <option value="0.092"> Norweigan Krone </option>
+        <option value="0.14"> Danish Krone </option>
+     </select>
+    <input type="number" id="input" placeholder= "1">
+
+
+    <br>
+    <input type="button" onclick = "conversion()" value="Convert currency">
+     <br>
+     <label id = "convertedMoney">output </label>
+    <a class = "about-link" href = "about.html" title = "about us">About Us</a>
+    <br>
+    <div class = "right"> 
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <button id = "amog" class = "open-button" onclick = "openForm()"><img id = "amog" src ="images/Calcualtor.png"></button>
+     <div class="form-popup" id = "myForm">
+         <div id="calculator">
+             <input id="display" readonly>
+             <div id="keys">
+             <button onclick="TheUmmTheUhhTheErr('+')"class="operator-btn">+</button>
+             <button onclick="TheUmmTheUhhTheErr('7')">7</button>
+             <button onclick="TheUmmTheUhhTheErr('8')">8</button>
+             <button onclick="TheUmmTheUhhTheErr('9')">9</button>
+             <button onclick="TheUmmTheUhhTheErr('-')"class="operator-btn">-</button>
+             <button onclick="TheUmmTheUhhTheErr('4')">4</button>
+             <button onclick="TheUmmTheUhhTheErr('5')">5</button>
+             <button onclick="TheUmmTheUhhTheErr('6')">6</button>
+             <button onclick="TheUmmTheUhhTheErr('*')"class="operator-btn">*</button>
+             <button onclick="TheUmmTheUhhTheErr('1')">1</button>
+             <button onclick="TheUmmTheUhhTheErr('2')">2</button>
+             <button onclick="TheUmmTheUhhTheErr('3')">3</button>
+             <button onclick="TheUmmTheUhhTheErr('/')"class="operator-btn">/</button>
+             <button onclick="TheUmmTheUhhTheErr('0')">0</button>
+             <button onclick="TheUmmTheUhhTheErr('.')">.</button>
+             <button onclick ="calculate()">=</button>
+             <button onclick = "clearDisplay()" class="operator-btn">C</button>
+             <button class="close-btn" onclick="closeForm()">X</button>
+               </div>
+            </div>
+       </div>
+ </div>
+    <script>
+        function conversion()
+        {
+            let temp = document.getElementById("from");
+            let tempTwo = document.getElementById("to");
+            let a = document.getElementById("from").value;
+            let b = document.getElementById("to").value;
+            let c = document.getElementById("input").value;
+
+            let tot = c*a/b;
+
+            tot = Math.ceil(tot*100) / 100;
+            if (/\./.test(tot) === false) {
+               tot = `${tot}.00`;
+            } 
+            if(c=="")
+            {
+                document.getElementById("convertedMoney").textContent = "Please fill out all fields";
+            }
+            else{
+                document.getElementById("convertedMoney").textContent = c + " " + temp.options[temp.selectedIndex].text + " is worth approximately " + tot + " "+tempTwo.options[tempTwo.selectedIndex].text +".";
+            }
+        }
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+const display=document.getElementById("display");
+        function calculate(){
+            try{
+                display.value = eval(display.value);
+            }
+            catch(error)
+            {
+                display.value = "Error, refresh page";
+            }
+        }
+        function TheUmmTheUhhTheErr(input){
+            display.value += input;
+        }
+        function clearDisplay(){
+            display.value = " ";
+        }
+    </script>
+</body>
+</html>
